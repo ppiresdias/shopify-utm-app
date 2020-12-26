@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/app', function () {
     return view('home');
-})->middleware(['auth.shopify'])->name('home');
+})->middleware(['auth.shopify']);
+
+Route::get('/app/{path}', [
+    'uses' => 'DashboardController@index',
+    'as' => 'dashboard',
+    'where' => ['path' => '.*']
+])->middleware(['auth.shopify'])->name('home');

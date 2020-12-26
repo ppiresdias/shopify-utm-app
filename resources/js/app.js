@@ -4,6 +4,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {AppProvider, Page, Card} from '@shopify/polaris'
 import {Provider, TitleBar} from '@shopify/app-bridge-react'
+import Dashboard from './components/Dashboard'
 
 export default class App extends Component{
 
@@ -24,6 +25,7 @@ export default class App extends Component{
                             <p>View a summary of your online store’s performance.</p>
                         </Card>
                     </Page>
+                    <Dashboard/>
                 </Provider>
             </AppProvider>
         );
