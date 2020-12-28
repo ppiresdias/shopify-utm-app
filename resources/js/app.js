@@ -4,7 +4,17 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {AppProvider, Page, Card} from '@shopify/polaris'
 import {Provider, TitleBar} from '@shopify/app-bridge-react'
-import Dashboard from './components/Dashboard'
+import Dashboard from './pages/Dashboard'
+import MainLayout from './layouts/MainLayout'
+import Home from './pages/Home'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import CreateNewLink from './pages/links/CreateNewLink'
+import ShowAllLinks from './pages/links/ShowAllLinks'
 
 export default class App extends Component{
 
@@ -19,13 +29,21 @@ export default class App extends Component{
         return (
             <AppProvider>
                 <Provider config={config}>
-                    <TitleBar title="Polaris Demo" />
-                    <Page title="UTM Dashboard">
-                        <Card title="Online store dashboard" sectioned>
-                            <p>View a summary of your online store’s performance.</p>
-                        </Card>
-                    </Page>
-                    <Dashboard/>
+                    <Router>
+                        <MainLayout>
+                            <Switch>
+                            <Route path="/app/links/new">
+                               <CreateNewLink/>
+                            </Route>
+                            <Route path="/app/links/all">
+                               <ShowAllLinks/>
+                            </Route>
+                            <Route path="/app/">
+                                <Home />
+                            </Route>
+                            </Switch>
+                        </MainLayout>
+                    </Router>
                 </Provider>
             </AppProvider>
         );

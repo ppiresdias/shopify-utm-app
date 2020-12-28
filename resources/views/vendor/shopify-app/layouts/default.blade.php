@@ -5,6 +5,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('shopify-app.app_name') }}</title>
+        <link rel="stylesheet" href="{{asset('template/main.css')}}">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         @yield('styles')
     </head>

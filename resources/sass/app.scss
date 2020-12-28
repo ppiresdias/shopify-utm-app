@@ -1,2 +1,9 @@
 //
-@import "~@shopify/polaris/dist/styles.css"
+//@import "~@shopify/polaris/dist/styles.css"
+.fixed-header .app-main {
+    padding-top: 0;
+}
+
+.app-sidebar{
+    padding-top: 60px;
+}
