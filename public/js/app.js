@@ -91754,6 +91754,12 @@ function CreateNewLink() {
   Object(_shopify_app_bridge_react__WEBPACK_IMPORTED_MODULE_1__["useRoutePropagation"])(location);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_app_bridge_react__WEBPACK_IMPORTED_MODULE_1__["TitleBar"], {
     title: "Create New Link"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_app_bridge_react__WEBPACK_IMPORTED_MODULE_1__["ResourcePicker"], {
+    resourceType: "Product",
+    open: true,
+    onSelection: function onSelection(product) {
+      console.log(product);
+    }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "app-page-title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

@@ -1,5 +1,5 @@
 import React from "react"
-import {TitleBar, useRoutePropagation} from '@shopify/app-bridge-react';
+import {TitleBar, useRoutePropagation, ResourcePicker} from '@shopify/app-bridge-react';
 import { useLocation } from "react-router-dom";
 
 export default function CreateNewLink(){
@@ -10,6 +10,9 @@ export default function CreateNewLink(){
     return(
         <>
          <TitleBar title="Create New Link" />
+         <ResourcePicker resourceType="Product" open={true} onSelection={(product) => {
+             console.log(product)
+         }}/>
             <div className="app-page-title">
                 <div className="page-title-wrapper">
                     <div className="page-title-heading">

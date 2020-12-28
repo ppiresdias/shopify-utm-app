@@ -10,7 +10,7 @@ export default function ShowAllLinks(){
     return(
         <>
         <TitleBar title="View All Links" />
-            Show All Links Page
+        Show All Links Page
         </>
     )
 }
