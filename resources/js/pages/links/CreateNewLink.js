@@ -1,32 +1,38 @@
 import React from "react"
+import {TitleBar, useRoutePropagation} from '@shopify/app-bridge-react';
+import { useLocation } from "react-router-dom";
 
 export default function CreateNewLink(){
+    let location = useLocation()
+    console.log(location)
+    useRoutePropagation(location)
 
     return(
         <>
+         <TitleBar title="Create New Link" />
             <div className="app-page-title">
                 <div className="page-title-wrapper">
-                <div className="page-title-heading">
-                    <div className="page-title-icon">
-                    <i className="pe-7s-display1 icon-gradient bg-premium-dark">
-                    </i>
+                    <div className="page-title-heading">
+                        <div className="page-title-icon">
+                        <i className="pe-7s-display1 icon-gradient bg-premium-dark">
+                        </i>
+                        </div>
+                        <div>Create A New Link
+                        <div className="page-title-subheading">
+                            Choose a product and create a link to promote product
+                        </div>
+                        </div>
                     </div>
-                    <div>Create A New Link
-                    <div className="page-title-subheading">
-                        Choose a product and create a link to promote product
-                    </div>
-                    </div>
-                </div>
-                <div className="page-title-actions">
-                    <div className="d-inline-block dropdown">
-                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="btn-shadow btn btn-info">
-                        <span className="btn-icon-wrapper pr-2 opacity-7">
-                        <i className="fa fa-business-time fa-w-20" />
-                        </span>
-                        Save
-                    </button>
-                    </div>
-                </div>    
+                    <div className="page-title-actions">
+                        <div className="d-inline-block dropdown">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="btn-shadow btn btn-info">
+                            <span className="btn-icon-wrapper pr-2 opacity-7">
+                            <i className="fa fa-business-time fa-w-20" />
+                            </span>
+                            Save
+                        </button>
+                        </div>
+                    </div>    
                 </div>
             </div>
             <div className="row">
