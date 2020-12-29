@@ -90241,21 +90241,30 @@ function MainLayout(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "nav-link-icon fa fa-database"
   }, " "), "Statistics")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "btn-group nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "nav-link-icon fa fa-edit"
   }), "Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "dropdown nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "nav-link-icon fa fa-cog"
@@ -90745,12 +90754,18 @@ function MainLayout(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, "Footer Link 1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, "Footer Link 2")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "app-footer-right"
@@ -90759,12 +90774,18 @@ function MainLayout(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, "Footer Link 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "javascript:void(0);",
+    href: "#",
+    onClick: function onClick(e) {
+      return e.preventDefault();
+    },
     className: "nav-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "badge badge-success mr-1 ml-0"
@@ -91756,7 +91777,7 @@ function CreateNewLink() {
     title: "Create New Link"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_app_bridge_react__WEBPACK_IMPORTED_MODULE_1__["ResourcePicker"], {
     resourceType: "Product",
-    open: true,
+    open: false,
     onSelection: function onSelection(product) {
       console.log(product);
     }
@@ -91778,9 +91799,6 @@ function CreateNewLink() {
     className: "d-inline-block dropdown"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "data-toggle": "dropdown",
-    "aria-haspopup": "true",
-    "aria-expanded": "false",
     className: "btn-shadow btn btn-info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "btn-icon-wrapper pr-2 opacity-7"
@@ -91796,74 +91814,88 @@ function CreateNewLink() {
     className: "card-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "card-title"
-  }, "Controls Types"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Controls Types"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "position-relative form-group"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "exampleEmail",
-    className: true
-  }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "email",
-    id: "exampleEmail",
-    placeholder: "with a placeholder",
-    type: "email",
+    htmlFor: "productUrl"
+  }, "Product URL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "campaignSource",
+    id: "productUrl",
+    placeholder: "Product URL",
+    type: "text",
     className: "form-control"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "position-relative form-group"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "examplePassword",
-    className: true
-  }, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "password",
-    id: "examplePassword",
-    placeholder: "password placeholder",
-    type: "password",
+    htmlFor: "campaignSource"
+  }, "Campaign Source"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "campaignSource",
+    id: "campaignSource",
+    placeholder: "Google, Youtube, Instagram, etc.",
+    type: "text",
     className: "form-control"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "position-relative form-group"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "exampleSelect",
-    className: true
-  }, "Select"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    name: "select",
-    id: "exampleSelect",
+    htmlFor: "campaignMedium"
+  }, "Campaign Medium"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "campaignMedium",
+    id: "campaignMedium",
+    placeholder: "CPC, Banner, Instagram Profile Link",
+    type: "text",
     className: "form-control"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "5"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "position-relative form-group"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "exampleSelectMulti",
-    className: true
-  }, "Select Multiple"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    multiple: true,
-    name: "selectMulti",
-    id: "exampleSelectMulti",
-    className: "form-control"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "5"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "position-relative form-group"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "exampleText",
-    className: true
-  }, "Text Area"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    htmlFor: "campaignName"
+  }, "CamapignName"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     name: "text",
-    id: "exampleText",
-    className: "form-control",
-    defaultValue: ""
+    id: "campaignName",
+    placeholder: "50JULY42020, LABOR DAY 2020, COUPON123",
+    type: "text",
+    className: "form-control"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "position-relative form-group"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "exampleFile",
-    className: true
-  }, "File"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "file",
-    id: "exampleFile",
-    type: "file",
-    className: "form-control-file"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-    className: "form-text text-muted"
-  }, "This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    htmlFor: "campaignTerm"
+  }, "CampaignTerm (Optional)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "text",
+    id: "campaignTerm",
+    placeholder: "Add Paid Keywords",
+    type: "text",
+    className: "form-control"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "position-relative form-group"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "campaignContent"
+  }, "Campaign Content"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "campaignContent",
+    id: "campaignContent",
+    placeholder: "Girl with Laptop Image Ad, Image3, Banner5",
+    type: "text",
+    className: "form-control"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "mt-1 btn btn-primary"
-  }, "Submit")))))));
+  }, "Submit"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "main-card mb-3 card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title"
+  }, "Link Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "position-relative form-group"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "campaignContent"
+  }, "Campaign Content"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    name: "linkPreview",
+    id: "linkPreview",
+    placeholder: "",
+    disabled: true,
+    type: "text",
+    className: "form-control"
+  })))))));
 }
 
 /***/ }),
