@@ -1,19 +1,25 @@
-import React from "react"
+import React, {useState} from "react"
 import {TitleBar, useRoutePropagation, ResourcePicker} from '@shopify/app-bridge-react';
 import { useLocation } from "react-router-dom";
 
-export default function CreateNewLink(){
+export default function CreateNewProductLink(){
     let location = useLocation()
     console.log(location)
     useRoutePropagation(location)
 
+    const [resourcePickerOpen, setResourcePickerOpen] = useState(true);
+    const [productData, setProductData] = useState(false);
+
+    function handleResourcePicker(resource) {
+        setProductData(resource.selection[0])
+        console.log(resource)
+
+    }
     return(
         <>
          <TitleBar title="Create New Link" />
-         <ResourcePicker resourceType="Product" open={false} onSelection={(product) => {
-             console.log(product)
-         }}/>
-            <div className="app-page-title">
+         <ResourcePicker resourceType="Product" open={resourcePickerOpen} onSelection={setProductData}/>
+            <div className={productData == false ? "app-page-title .d-none" : "app-page-title"}>
                 <div className="page-title-wrapper">
                     <div className="page-title-heading">
                         <div className="page-title-icon">
@@ -38,7 +44,7 @@ export default function CreateNewLink(){
                     </div>    
                 </div>
             </div>
-            <div className="row">
+            <div className={productData == false ? "row .d-none .d-none" : "row .d-none"}>
                 <div className="col-md-6">
                     <div className="main-card mb-3 card">
                         <div className="card-body"><h5 className="card-title">Controls Types</h5>
@@ -59,6 +65,14 @@ export default function CreateNewLink(){
                 <div className="col-md-6">
                     <div className="main-card mb-3 card">
                         <div className="card-body"><h5 className="card-title">Link Preview</h5>
+                        <div className="row mb-3">
+                            <div className="col-md-4">
+                                <img src="https://fossil.scene7.com/is/image/FossilPartners/ZB7314745_main?$sfcc_fos_large$" className="img-fluid"/>
+                            </div>
+                            <div className="col-md-4 d-flex align-items-center">
+                                <h6>Converse Sneakers</h6>
+                            </div>
+                        </div>
                         <div className="position-relative form-group"><label htmlFor="campaignContent">Campaign Content</label><textarea name="linkPreview" id="linkPreview" placeholder="" disabled type="text" className="form-control"></textarea></div>
                         </div>
                     </div>

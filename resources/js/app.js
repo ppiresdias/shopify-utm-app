@@ -13,7 +13,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import CreateNewLink from './pages/links/CreateNewLink'
+import CreateNewProductLink from './pages/links/CreateNewProductLink'
 import ShowAllLinks from './pages/links/ShowAllLinks'
 
 export default class App extends Component{
@@ -32,8 +32,8 @@ export default class App extends Component{
                     <Router>
                         <MainLayout>
                             <Switch>
-                            <Route path="/app/links/new">
-                               <CreateNewLink/>
+                            <Route path="/app/links/product/new">
+                               <CreateNewProductLink/>
                             </Route>
                             <Route path="/app/links/all">
                                <ShowAllLinks/>

@@ -22,7 +22,7 @@ export default function SideNavigation(){
                   </li>
                   <li className="app-sidebar__heading">Manage Links</li>
                   <li>
-                    <Link to="/app/links/new">
+                    <Link to="/app/links/product/new">
                         <i className="metismenu-icon pe-7s-rocket" />
                         Create New Link
                     </Link>
