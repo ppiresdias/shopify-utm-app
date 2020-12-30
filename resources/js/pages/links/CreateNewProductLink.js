@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {TitleBar, useRoutePropagation, ResourcePicker} from '@shopify/app-bridge-react';
 import { useLocation } from "react-router-dom";
+import axios from 'axios';
 
 export default function CreateNewProductLink(){
     let location = useLocation()
@@ -14,11 +15,25 @@ export default function CreateNewProductLink(){
         setProductData(resource.selection[0])
         console.log(resource)
 
+        axios.get('/app/graphql')
+            .then(function (response) {
+                // handle success
+                console.log('response from server:');
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+
     }
     return(
         <>
          <TitleBar title="Create New Link" />
-         <ResourcePicker resourceType="Product" open={resourcePickerOpen} onSelection={setProductData}/>
+         <ResourcePicker resourceType="Product" open={resourcePickerOpen} onSelection={handleResourcePicker}/>
             <div className={productData == false ? "app-page-title .d-none" : "app-page-title"}>
                 <div className="page-title-wrapper">
                     <div className="page-title-heading">
