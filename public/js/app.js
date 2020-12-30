@@ -93615,7 +93615,11 @@ function CreateNewProductLink() {
   function handleResourcePicker(resource) {
     setProductData(resource.selection[0]);
     console.log(resource);
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/app/graphql').then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/app/graphql', {
+      params: {
+        query: "\n                    {\n                        product(id: \"gid://shopify/Product/6130341347523\") {\n                          title\n                          description\n                          images(first:1) {\n                            edges {\n                              node {\n                                id\n                                originalSrc\n                              }\n                            }\n                          }\n                          onlineStoreUrl\n                        }\n                      }\n                    "
+      }
+    }).then(function (response) {
       // handle success
       console.log('response from server:');
       console.log(response);

@@ -12,17 +12,11 @@ class DashboardController extends Controller
         return view('home');
     }
 
-    public function graphql(){
+    public function graphql(Request $request){
         $shop = Auth::user();
 
         $request = $shop->api()->graph(
-            '{
-            product(id: "gid://shopify/Product/6130341347523") {
-                title
-                description
-                onlineStoreUrl
-            }
-          }'
+            $request->input('query')
         );
         //dd($request['body']);
         return json_encode($request['body']['data']['product']);

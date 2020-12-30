@@ -15,7 +15,27 @@ export default function CreateNewProductLink(){
         setProductData(resource.selection[0])
         console.log(resource)
 
-        axios.get('/app/graphql')
+        axios.get('/app/graphql', {
+                params: {
+                    query: `
+                    {
+                        product(id: "gid://shopify/Product/6130341347523") {
+                          title
+                          description
+                          images(first:1) {
+                            edges {
+                              node {
+                                id
+                                originalSrc
+                              }
+                            }
+                          }
+                          onlineStoreUrl
+                        }
+                      }
+                    `
+                }
+            })
             .then(function (response) {
                 // handle success
                 console.log('response from server:');
